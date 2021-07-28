@@ -1,13 +1,18 @@
-import React, { useState } from 'react'
+
 import Users from './Users'
+import { useContext,useState } from 'react'
+import { UserContext } from '../contexts/UserContext'
+import { Modal,Button } from 'react-bootstrap'
+import AddUser from './AddUser'
 
 const UsersList = () => {
         
-        const [users,setUsers] = useState([
-        {id:1, num: '123456789', date: '01/06/2021', etat: 'En validation', nom: 'Mohamed', prenom: 'Taha', use: 'mtaha', matricule: '2584'},
-        {id:2, num: '987654321', date: '25/07/2021', etat: 'Validé', nom: 'Hamid', prenom: 'Orrich', use: 'horrich', matricule: '1594'},
-        {id:3, num: '852963741', date: '15/09/2021', etat: 'Rejeté', nom: 'Rachid', prenom: 'Mahidi', use: 'rmahidi', matricule: '3576'},
-        ])
+    const {users} = useContext(UserContext);
+    
+    const [show, setShow] = useState(false);
+    
+    const handleShow = () => setShow(true);
+    const handleClose = () => setShow(false);
 
     return(
 
@@ -17,7 +22,7 @@ const UsersList = () => {
 					<div className="col-sm-6">
 					</div>
 					<div className="col-sm-6">
-						<a href="#addUserModal" className="btn btn-warning" data-toggle="modal"><i className="material-icons">&#xE147;</i> <span>Ajouter utilisateur</span></a>					
+						<Button onClick={handleShow} className="btn btn-warning" data-toggle="modal"><i className="material-icons">&#xE147;</i> <span>Ajouter utilisateur</span></Button>					
 					</div>
 				</div>
 			</div>
@@ -48,7 +53,24 @@ const UsersList = () => {
                                       
                                     </tbody>
                         </table>
+        <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>
+                        Add Employee
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <AddUser/>
+                </Modal.Body>
+                <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>
+                            Close Button
+                        </Button>
+                </Modal.Footer>
+    </Modal>
     </>
+
+    
     )
     
 }
