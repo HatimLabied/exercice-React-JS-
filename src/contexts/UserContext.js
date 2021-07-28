@@ -18,10 +18,13 @@ const addUsers = (num, date, etat, nom ,prenom ,use ,matricule ) => {
 }
 
 
+const deleteUser = (id) => {
+    setUsers(users.filter(users => users.id !== id))
+}
 
 
     return (
-        <UserContext.Provider value={{users,addUsers}}>
+        <UserContext.Provider value={{users,addUsers,deleteUser}}>
             {props.children}
         </UserContext.Provider>
     )

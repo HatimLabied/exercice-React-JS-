@@ -15,17 +15,11 @@ const UsersList = () => {
     const handleClose = () => setShow(false);
 
     return(
-
 <>
-            <div className="table-title">
-				<div className="row">
-					<div className="col-sm-6">
-					</div>
-					<div className="col-sm-6">
-						<Button onClick={handleShow} className="btn btn-warning" data-toggle="modal"><i className="material-icons">&#xE147;</i> <span>Ajouter utilisateur</span></Button>					
-					</div>
-				</div>
-			</div>
+<>
+            
+            
+          
           
                         <table className="table table-striped table-hover">
                                     <thead>
@@ -53,6 +47,8 @@ const UsersList = () => {
                                       
                                     </tbody>
                         </table>
+
+                        
         <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>
@@ -64,12 +60,24 @@ const UsersList = () => {
                 </Modal.Body>
                 <Modal.Footer>
                         <Button variant="secondary" onClick={handleClose}>
-                            Close Button
+                            Annuler
                         </Button>
                 </Modal.Footer>
     </Modal>
     </>
-
+    <>
+    <div className="table-title">
+				<div className="row">
+					<div className="col-sm-6">
+					</div>
+					<div className="col-sm-6">
+						<Button onClick={handleShow} className="btn btn-warning" data-toggle="modal"><i className="material-icons">&#xE147;</i> <span>Ajouter utilisateur</span></Button>					
+					</div>
+				</div>
+			</div>
+            
+    </>
+</>
     
     )
     

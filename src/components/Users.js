@@ -1,5 +1,9 @@
+import { UserContext } from "../contexts/UserContext";
+import { useContext } from "react";
+import { Button } from "react-bootstrap";
 
 const Users = ({users}) => {
+    const {deleteUser} = useContext(UserContext)
     return(
     <>
         
@@ -11,7 +15,7 @@ const Users = ({users}) => {
         <td>{users.use}</td>
         <td>{users.matricule}</td>
         <td>
-            <a href="#deleteUserModal" className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+            <a onClick={() => deleteUser(users.id)}  className="delete" data-toggle="modal"><i className="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
         </td>
         
 
