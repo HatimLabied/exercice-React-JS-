@@ -41,7 +41,7 @@ return(
 {/*  Date*/ }
     <Form.Group>
         <Form.Control
-              type="text"
+              type="date"
               placeholder="JJ/MM/AAAA *"
               name="date"
               value={date}
@@ -52,9 +52,10 @@ return(
 {/*  Etat*/ }
     <Form.Group>
         <Form.Control
-             type="text"
+             type="select"
              placeholder="Etat *"
              name="etat"
+             
              value={etat}
              onChange = { (e) => onInputChange(e)}
              required

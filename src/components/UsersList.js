@@ -52,7 +52,7 @@ const UsersList = () => {
         <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>
-                        Add Employee
+                    Ajouter d'utilisateurs
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -66,7 +66,7 @@ const UsersList = () => {
     </Modal>
     </>
     <>
-    <div className="table-title">
+            <div className="table-title">
 				<div className="row">
 					<div className="col-sm-6">
 					</div>
