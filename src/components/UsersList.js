@@ -5,6 +5,7 @@ import { UserContext } from '../contexts/UserContext'
 import { Modal,Button } from 'react-bootstrap'
 import AddUser from './AddUser'
 
+
 const UsersList = () => {
         
     const {users} = useContext(UserContext);
@@ -16,10 +17,9 @@ const UsersList = () => {
 
     return(
 <>
-<>
+     
             
-            
-          
+                 
           
                         <table className="table table-striped table-hover">
                                     <thead>
@@ -47,37 +47,34 @@ const UsersList = () => {
                                       
                                     </tbody>
                         </table>
-
+                        
                         
         <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>
+                    <Modal.Title >
                     Ajouter d'utilisateurs
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <AddUser/>
                 </Modal.Body>
-                <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
-                            Annuler
-                        </Button>
-                </Modal.Footer>
+               
     </Modal>
-    </>
-    <>
+    
+    
             <div className="table-title">
 				<div className="row">
 					<div className="col-sm-6">
 					</div>
 					<div className="col-sm-6">
-						<Button onClick={handleShow} className="btn btn-warning" data-toggle="modal"><i className="material-icons">&#xE147;</i> <span>Ajouter utilisateur</span></Button>					
+						<Button onClick={handleShow} className="btn btn-warning" data-toggle="modal" style={{'borderRadius':'5px','backgroundColor':"#ffaa0a"}}><i className="material-icons">&#xE147;</i> <span>Ajouter utilisateur</span></Button>					
 					</div>
 				</div>
 			</div>
-            
-    </>
+ 
+    
 </>
+    
     
     )
     
