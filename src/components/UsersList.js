@@ -21,8 +21,8 @@ const UsersList = () => {
             
                  
           
-                        <table className="table table-striped table-hover" style={{'border':' 2px solid #e7e7e7','borderRadius':'15px','margin-top': '3%','margin':"3px",'box-shadow': '5px 5px 5px #f1f1f1'}}>
-                                    <thead>
+                        <table className="table table-striped table-hover"              style={{'border':' 2px solid #e7e7e7','borderRadius':'15px','margin-top': '3%','margin':"3px",'box-shadow': '5px 5px 5px #f1f1f1'}}>
+                                    <thead >
                                         <tr>
                                             <th>ID</th>
                                             <th>Date de Création</th>
@@ -63,7 +63,7 @@ const UsersList = () => {
     </Modal>
     
     
-            <div className="table-title"  style={{'border':' 2px solid #e7e7e7','borderRadius':'5px','top': '43px','margin':'3px','box-shadow': '5px 5px 5px #f1f1f1'}}>
+            <div className="table-title"             style={{'border':' 2px solid #e7e7e7','borderRadius':'5px','top': '43px','margin':'3px','box-shadow': '5px 5px 5px #f1f1f1'}}>
 				<div className="row">
 					<div className="col-sm-6">
 					</div>
